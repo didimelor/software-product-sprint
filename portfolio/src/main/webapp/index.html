@@ -2,18 +2,61 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Diana Melo</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <div id="nav-bar">
+          <div id="left-side">
+            <div class="link">
+              <a href="projects.html">MY PROJECTS</a>
+            </div>
+            <div class="link">
+              <a href="skills.html">MY SKILLS</a>
+            </div>
+          </div>
+          <div class="heading">
+            <div class="myPortfolio">My Portfolio</div>
+            <div class="Diana">Diana Melo</div>
+          </div>
+          <div id="social">
+            <div class="logos">
+              <div class="logo">
+                <a href="https://github.com/didimelor">
+                  <img src="images/gitHub.png" alt="gitHub logo">
+                </a>
+              </div>
+              <div class="logo">
+                <a href="https://www.linkedin.com/in/diana-karen-melo-reyes-5282a9204">
+                  <img src="images/linkedin.png" alt="Linkedin logo">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body-card">
+          <div class="card-container">
+            <div class="card">
+              <div class="me">
+                <div class="circle"></div>
+                <img src="images/me.png" alt="An image of me">
+              </div>
+              <div class="my-info">
+                <h1 class="Title">Hello, my name is Diana</h1>
+                <h3>I am 19 and currently a second year CS student at ITESM in Mexico City. I like to play the guitar, code and dance.</h3>
+                <div class="buttons">
+                  <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+                  <button onclick="addRandomGreeting()">Click for greeting</button>
+                  <div id="greeting-container"></div>
+                  <button onclick="randomFactAboutMe()">Random fact about me</button>
+                  <p id="random-fact"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </body>
 </html>
