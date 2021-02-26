@@ -26,3 +26,10 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function randomFactAboutMe()
+{
+    const myFacts = ['My first word as a baby was Tacos', 'My favorite food is avocado toast', 'I love to speak french', 'My favorite T.V. show is MasterChef'];
+    const theFact = myFacts[Math.floor(Math.random() * myFacts.length)];
+    document.getElementById('random-fact').innerText = theFact;
+}
