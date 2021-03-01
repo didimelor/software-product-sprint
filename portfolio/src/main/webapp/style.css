@@ -3,10 +3,19 @@
 /* font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
+html {
+    scroll-behavior: smooth;
+  }
 body
 {
-    background-color: rgb(248, 246, 239);
-    padding: 20px;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 }
 /* Nav bar styling */
 #nav-bar
@@ -17,10 +26,13 @@ body
 }
 .heading
 {
+    position: absolute;
     font-family: 'Bitter', serif;
     text-align: center;
     font-size: 30px;
     justify-content: center;
+    margin-top: 20px;
+    margin-left: 450px;
 }
 #social
 {
@@ -36,6 +48,12 @@ body
     width: 30px;
     height: auto;
     margin-right: 30px;
+}
+.logo img:hover
+{
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5); 
 }
 #left-side
 {
@@ -66,18 +84,31 @@ body
     color:  black;
 }
 /* Card */
+.background
+{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#main-background
+{
+    background-image: url("../images/back.jpg");
+}
 .body-card
 {
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px;
 }
 .card-container
 {
-    width: 50%;
+    background-color: transparent;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,16 +116,18 @@ body
 .card
 {
     min-height: 50vh;
-    width: 35rem;
+    width: 100vh;
     box-shadow: 0 20px 20px black, 0px 0px 50px black;
     padding: 0rem 5rem;
+    background-color: white;
 }
 .me
 {
-    min-height: 35vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px;
 }
 .me img
 {
@@ -103,28 +136,118 @@ body
 }
 .circle
 {
-    width: 15rem;
-    height: 15rem;
-    background: linear-gradient(to right,#e0c9bb,#bbcde0);
-    position: absolute;
+    width: 18rem; 
+    height: 18rem;
+    background: linear-gradient(to right,#783937FF,#F1AC88FF);
+    position: absolute; 
     border-radius: 50%;
+    -webkit-animation: rotate 2s linear infinite;
+    -o-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
 }
-h1
+@keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+#Title
 {
     font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
     background-color:rgb(248, 246, 239);
-    background-image: linear-gradient(45deg, #e0c9bb, #bbcde0);
+    background-image: linear-gradient(45deg, #F1AC88FF, #783937FF);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
 }
-p
+.buttons
 {
-    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-h2
+.btn-container
 {
     padding: 20px;
+}
+.btn
+{
+    font-family: 'Abril Fatface', cursive;;
+    background: none;
+    color: #783937FF;
+    width: 180px;
+    height: 70px;
+    border: 1px solid #783937FF;
+    font-size: 17px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Skills */
+.heading-body
+{
+    background-color: rgb(235, 185, 159);
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#skill-background
+{
+    background-image: url("images/skillBackground.jpg");
+}
+.skill-container
+{
+    padding: 50px;
+}
+.skill-logo img
+{
+    width: 50px;
+    position: relative;
+    padding: 10px;
+}
+#cpp { animation: moveStrong 6s both; }
+#sql { animation: moveMedium 6s both; }
+#python { animation: moveMedium 6s both;}
+#java { animation: moveBasic 6s both;}
+#js { animation: moveBasic 6s both;}
+
+@keyframes moveStrong {
+    from {left: 0px;}
+    to {left: 935px;}
+  }
+  @keyframes moveMedium {
+    from {left: 0px;}
+    to {left: 510px;}
+  }
+  @keyframes moveBasic {
+    from {left: 0px;}
+    to {left: 110px;}
+  }
+/* Gallery */
+
+.gallery-container
+{
+    padding: 15px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minimax(200px, 1fr));
+    grid-gap: 20px;
+}
+.gallery-container img
+{
+    width: 390px;
+    border-radius: 20px;
 }
