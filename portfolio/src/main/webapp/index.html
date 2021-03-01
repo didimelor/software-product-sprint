@@ -6,36 +6,36 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="typeWriter()">
     <div id="content">
-        <div id="nav-bar">
-          <div id="left-side">
-            <div class="link">
-              <a href="projects.html">MY PROJECTS</a>
-            </div>
-            <div class="link">
-              <a href="skills.html">MY SKILLS</a>
-            </div>
+      <div id="nav-bar">
+        <div id="left-side">
+          <div class="link">
+            <a href="#gallery">GALLERY</a>
           </div>
-          <div class="heading">
-            <div class="myPortfolio">My Portfolio</div>
-            <div class="Diana">Diana Melo</div>
+          <div class="link">
+            <a href="#skill">MY SKILLS</a>
           </div>
-          <div id="social">
-            <div class="logos">
-              <div class="logo">
-                <a href="https://github.com/didimelor">
-                  <img src="images/gitHub.png" alt="gitHub logo">
-                </a>
-              </div>
-              <div class="logo">
-                <a href="https://www.linkedin.com/in/diana-karen-melo-reyes-5282a9204">
-                  <img src="images/linkedin.png" alt="Linkedin logo">
-                </a>
-              </div>
+        </div>
+        <div class="heading">
+          <div id="myPortfolio"></div>
+        </div>
+        <div id="social">
+          <div class="logos">
+            <div class="logo">
+              <a href="https://github.com/didimelor">
+                <img src="images/gitHub.png" alt="gitHub logo">
+              </a>
+            </div>
+            <div class="logo">
+              <a href="https://www.linkedin.com/in/diana-karen-melo-reyes-5282a9204">
+                <img src="images/linkedin.png" alt="Linkedin logo">
+              </a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="background" id="main-background">
         <div class="body-card">
           <div class="card-container">
             <div class="card">
@@ -44,19 +44,56 @@
                 <img src="images/me.png" alt="An image of me">
               </div>
               <div class="my-info">
-                <h1 class="Title">Hello, my name is Diana</h1>
+                <div id="Title">Hello! My Name is Diana.</div>
                 <h3>I am 19 and currently a second year CS student at ITESM in Mexico City. I like to play the guitar, code and dance.</h3>
                 <div class="buttons">
-                  <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-                  <button onclick="addRandomGreeting()">Click for greeting</button>
-                  <div id="greeting-container"></div>
-                  <button onclick="randomFactAboutMe()">Random fact about me</button>
-                  <p id="random-fact"></p>
+                  <div class="btn-container">
+                    <button class="btn" onclick="addRandomGreeting()">Click for greeting</button>
+                    <div class="ans"id="greeting-container"></div>
+                  </div>
+                  <div class="btn-container">
+                    <button class="btn" onclick="randomFactAboutMe()">Fact about me</button>
+                    <div class="ans" id="random-fact"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="heading-body">
+        <div id="skill"><h2>Programming Languages / CS Skills</h2></div>
+      </div>
+      <div class="background" id="skill-background">
+        <div class="skill-container">
+          <table style="width:100%">
+              <tr>
+                <th>Basic</th>
+                <th>Medium</th> 
+                <th>Strong</th>
+              </tr>
+              <tr>
+          </table>
+          <div class="skill-logo"><div class="bar"></div><img id="cpp" src="images/c++.png" alt="C++ logo"></div>
+          <div class="skill-logo"><img id="sql" src="images/sql.png" alt="Sql logo"></div>
+          <div class="skill-logo"><img id="python"src="images/python.png" alt="Python logo"></div>
+          <div class="skill-logo"><img id="java"src="images/java.png" alt="Java logo"></div>
+        </div>
+      </div>
+      <div class="heading-body">
+        <div id="gallery"><h2>Gallery</h2></div>
+      </div>
+      <div class="gallery-container">
+        <div class="box"><img src="images/amsterdam.jpeg" alt="Amsterdam"></div>
+        <div class="box"><img src="images/dog.png" alt="Amsterdam"></div>
+        <div class="box"><img src="images/rack.png" alt="Amsterdam"></div>
+      </div>
+      <div class="gallery-container">
+        <div class="box"><img src="images/linda.jpeg" alt="Amsterdam"></div>
+        <div class="box"><img src="images/mex.jpg" alt="Amsterdam"></div>
+        <div class="box"><img src="images/dance.png" alt="Amsterdam"></div>
+      </div>
     </div>
   </body>
 </html>
+
