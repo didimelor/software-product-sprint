@@ -15,21 +15,34 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomGreeting() 
+    {
+        const greetings = ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+        // Pick a random greeting.
+        const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
+        // Add it to the page.
+        const greetingContainer = document.getElementById('greeting-container');
+        greetingContainer.innerText = greeting;
+    }
 
-function randomFactAboutMe()
-{
-    const myFacts = ['My first word as a baby was Tacos', 'My favorite food is avocado toast', 'I love to speak french', 'My favorite T.V. show is MasterChef'];
-    const theFact = myFacts[Math.floor(Math.random() * myFacts.length)];
-    document.getElementById('random-fact').innerText = theFact;
-}
+    function randomFactAboutMe()
+    {
+        const myFacts = ['My first word as a baby was Tacos', 'My favorite food is avocado toast', 'I love to speak french', 'My favorite T.V. show is MasterChef', 'I live in Mexico City','My favorite drink is iced latte','My favorite sport is Baskteball','I love going to concerts', 'I like to sing'];
+        const theFact = myFacts[Math.floor(Math.random() * myFacts.length)];
+        const randomFact = document.getElementById('random-fact').innerText = theFact;
+    }
+
+    function typeWriter()
+    {
+        if (i < txt.length) 
+        {
+            document.getElementById("myPortfolio").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    var txt = "My Portfolio Diana Melo";
+    var i = 0;
+    var speed = 120;
