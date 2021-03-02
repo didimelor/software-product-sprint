@@ -32,7 +32,7 @@ body
     font-size: 30px;
     justify-content: center;
     margin-top: 20px;
-    margin-left: 450px;
+    margin-left: 550px;
 }
 #social
 {
@@ -248,6 +248,6 @@ body
 }
 .gallery-container img
 {
-    width: 390px;
+    width: 450px;
     border-radius: 20px;
 }
