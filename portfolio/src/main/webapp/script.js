@@ -46,3 +46,12 @@ function addRandomGreeting()
     var txt = "My Portfolio Diana Melo";
     var i = 0;
     var speed = 120;
+
+    async function showServerInfo()
+    {
+        const responseFormServer = await fetch('/first-servlet');
+        const textFromResponse = await responseFormServer.json();
+        const hardCoddString = document.getElementById('show-hello-world');
+        const randomPick = textFromResponse[Math.floor(Math.random() * textFromResponse.length)]
+        hardCoddString.innerText = randomPick;
+    }
