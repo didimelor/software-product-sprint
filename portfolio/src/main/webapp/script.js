@@ -55,3 +55,17 @@ function addRandomGreeting()
         const randomPick = textFromResponse[Math.floor(Math.random() * textFromResponse.length)]
         hardCoddString.innerText = randomPick;
     }
+
+    async function showTravelPics()
+    {
+        const responseFormServer = await fetch('/show-images');
+        const textFromResponse = await responseFormServer.json();
+        let urls = new Array(textFromResponse.length);
+       let htmlString = `<img src="${textFromResponse[0]}"/>`;
+        for(i=1; i<textFromResponse.length; i++)
+        {
+            htmlString += `<img src="${textFromResponse[i]}"/>`
+        }
+        const displayImgs = document.getElementById('img-json');
+        displayImgs.innerHTML = htmlString;
+    }
