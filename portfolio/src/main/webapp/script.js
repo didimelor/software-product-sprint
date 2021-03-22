@@ -15,14 +15,57 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomGreeting() 
+    {
+        const greetings = ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+        // Pick a random greeting.
+        const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
+        // Add it to the page.
+        const greetingContainer = document.getElementById('greeting-container');
+        greetingContainer.innerText = greeting;
+    }
+
+    function randomFactAboutMe()
+    {
+        const myFacts = ['My first word as a baby was Tacos', 'My favorite food is avocado toast', 'I love to speak french', 'My favorite T.V. show is MasterChef', 'I live in Mexico City','My favorite drink is iced latte','My favorite sport is Baskteball','I love going to concerts', 'I like to sing'];
+        const theFact = myFacts[Math.floor(Math.random() * myFacts.length)];
+        const randomFact = document.getElementById('random-fact').innerText = theFact;
+    }
+
+    function typeWriter()
+    {
+        if (i < txt.length) 
+        {
+            document.getElementById("myPortfolio").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    var txt = "My Portfolio Diana Melo";
+    var i = 0;
+    var speed = 120;
+
+    async function showServerInfo()
+    {
+        const responseFormServer = await fetch('/first-servlet');
+        const textFromResponse = await responseFormServer.json();
+        const hardCoddString = document.getElementById('show-hello-world');
+        const randomPick = textFromResponse[Math.floor(Math.random() * textFromResponse.length)]
+        hardCoddString.innerText = randomPick;
+    }
+
+    async function showTravelPics()
+    {
+        const responseFormServer = await fetch('/show-images');
+        const textFromResponse = await responseFormServer.json();
+        let urls = new Array(textFromResponse.length);
+       let htmlString = `<img src="${textFromResponse[0]}"/>`;
+        for(i=1; i<textFromResponse.length; i++)
+        {
+            htmlString += `<img src="${textFromResponse[i]}"/>`
+        }
+        const displayImgs = document.getElementById('img-json');
+        displayImgs.innerHTML = htmlString;
+    }
